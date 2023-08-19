@@ -1,5 +1,5 @@
-//Этот проект я сделал по приколу и поэтому код тут очень упрощенный и кривой
-//Если вы хотите реальное 3д можете перейти в мой другой репозиторий
+//ГќГІГ®ГІ ГЇГ°Г®ГҐГЄГІ Гї Г±Г¤ГҐГ«Г Г« ГЇГ® ГЇГ°ГЁГЄГ®Г«Гі ГЁ ГЇГ®ГЅГІГ®Г¬Гі ГЄГ®Г¤ ГІГіГІ Г®Г·ГҐГ­Гј ГіГЇГ°Г®Г№ГҐГ­Г­Г»Г© ГЁ ГЄГ°ГЁГўГ®Г©
+//Г…Г±Г«ГЁ ГўГ» ГµГ®ГІГЁГІГҐ Г°ГҐГ Г«ГјГ­Г®ГҐ 3Г¤ Г¬Г®Г¦ГҐГІГҐ ГЇГҐГ°ГҐГ©ГІГЁ Гў Г¬Г®Г© Г¤Г°ГіГЈГ®Г© Г°ГҐГЇГ®Г§ГЁГІГ®Г°ГЁГ©
 // https://github.com/Mimocake/Minecraft-Grib-Edition
 
 #include <iostream>
@@ -227,19 +227,15 @@ int main()
 {
 	char screen[width * height + 1];
 	screen[width * height] = '\0';
-	for (int i = 0; i < width * height; i++)
-	{
-		screen[i] = ' ';
-	}
 	Block block(vec3(-0.5, -0.5, -0.5));
-	block.rotate(180 * 3.14159f / 180);
+	block.rotate(PI);
 	for (;;)
-	{		
+	{
 		for (int j = 0; j < width * height; j++)
 		{
 			screen[j] = ' ';
 		}
-		block.rotate(0.1 * 3.14159f / 180);
+		block.rotate(0.1 * PI / 180);
 		Block temp = block.project();
 		for (int i = 0; i < 6; i++)
 		{
